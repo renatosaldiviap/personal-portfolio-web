@@ -11,142 +11,142 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
   <main class="case-study">
     <div class="case-study__container">
-      <!-- Botón Volver -->
-      <a href={`${base}/#proyectos`} class="back-link">&larr; Volver al portafolio</a>
+      <!-- Back Button -->
+      <a href={`${base}/#projects`} class="back-link">&larr; Back to portfolio</a>
 
-      <!-- Encabezado / Resumen Ejecutivo -->
+      <!-- Header / Executive Summary -->
       <header class="case-study__header">
-        <p class="eyebrow">Caso de Estudio &bull; Análisis Exploratorio de Datos</p>
-        <h1>Hábitos de Gaming y Salud Mental</h1>
+        <p class="eyebrow">Case Study &bull; Exploratory Data Analysis</p>
+        <h1>Gaming Habits &amp; Mental Health</h1>
         <p class="lead">
-          Evaluación empírica en Python sobre el impacto real del tiempo de juego 
-          frente a indicadores de ansiedad, depresión, estrés y adicción.
+          Empirical Python evaluation of how daily playtime relates to anxiety,
+          depression, stress, and addiction indicators.
         </p>
 
         <div class="quick-facts">
           <div class="fact-card">
-            <span class="fact-label">Rol</span>
+            <span class="fact-label">Role</span>
             <span class="fact-value">Data Analyst</span>
           </div>
           <div class="fact-card">
-            <span class="fact-label">Enfoque</span>
-            <span class="fact-value">EDA y Contraste de Hipótesis</span>
+            <span class="fact-label">Focus</span>
+            <span class="fact-value">EDA &amp; Hypothesis Testing</span>
           </div>
           <div class="fact-card">
             <span class="fact-label">Stack</span>
             <span class="fact-value">Python, Pandas, Seaborn, Matplotlib</span>
           </div>
           <div class="fact-card">
-            <span class="fact-label">Entregable</span>
+            <span class="fact-label">Deliverable</span>
             <a href="https://github.com/RenatoSaldivia/gaming-mental-health-data-analysis" target="_blank" rel="noopener noreferrer" class="fact-link">
-              Repositorio GitHub &rarr;
+              GitHub Repository &rarr;
             </a>
           </div>
         </div>
       </header>
 
-      <!-- Contexto -->
+      <!-- Context -->
       <section class="section-block">
-        <h2>1. El Contexto y Pregunta de Negocio</h2>
+        <h2>1. Context &amp; Business Question</h2>
         <p>
-          El discurso popular suele asumir que jugar videojuegos causa deterioro directo en la salud mental. 
-          El objetivo fue auditar un dataset amplio de jugadores para comprobar con datos si existe una relación directa 
-          entre el número de horas jugadas y métricas clínicas de bienestar (ansiedad, depresión y horas de sueño).
+          Popular assumptions often claim that playing video games directly degrades mental health.
+          The goal was to audit a broad player dataset to test empirically whether there is a direct link
+          between hours played and wellbeing metrics such as anxiety, depression, and sleep duration.
         </p>
       </section>
 
-      <!-- Galería de Evidencia Visual -->
+      <!-- Visual Evidence Gallery -->
       <section class="section-block">
-        <h2>2. Evidencia Visual y Hallazgos</h2>
+        <h2>2. Visual Evidence &amp; Findings</h2>
         <p class="section-desc">
-          Proceso exploratorio desde la estructura demográfica hasta la correlación de impacto:
+          Exploratory workflow from demographic structure to impact correlation:
         </p>
 
         <div class="visual-grid">
-          <!-- Gráfico 1 -->
+          <!-- Chart 1 -->
           <article class="visual-card">
             <div class="visual-media">
               <img 
                 src={`${base}/images/projects/gaming/distribucion-edad.png`} 
-                alt="Distribución de edad de los jugadores" 
+                alt="Age distribution of players" 
                 loading="lazy"
               />
             </div>
             <div class="visual-caption">
-              <span class="step-tag">Fase 1: Auditoría Demográfica</span>
-              <h3>Distribución de edad homogénea (15 a 60 años)</h3>
+              <span class="step-tag">Phase 1: Demographic Audit</span>
+              <h3>Balanced age distribution (15 to 60 years)</h3>
               <p>
-                La muestra exhibe una representatividad balanceada entre distintos rangos etarios, lo que garantiza que las conclusiones no provengan únicamente de un nicho adolescente.
+                The sample shows broad representation across age brackets, ensuring that findings are not driven solely by an adolescent niche.
               </p>
             </div>
           </article>
 
-          <!-- Gráfico 2 -->
+          <!-- Chart 2 -->
           <article class="visual-card">
             <div class="visual-media">
               <img 
                 src={`${base}/images/projects/gaming/distribucion-horas.png`} 
-                alt="Distribución de horas de juego diarias" 
+                alt="Distribution of daily gaming hours" 
                 loading="lazy"
               />
             </div>
             <div class="visual-caption">
-              <span class="step-tag">Fase 2: Patrón de Uso</span>
-              <h3>Concentración casual con cola larga</h3>
+              <span class="step-tag">Phase 2: Usage Pattern</span>
+              <h3>Casual core with a long tail</h3>
               <p>
-                La media se sitúa entre 2 y 4 horas diarias, con una disminución progresiva hacia consumos intensivos que superan las 10 horas por jornada.
+                Most players average 2 to 4 hours per day, with a gradual decline toward heavy usage exceeding 10 hours daily.
               </p>
             </div>
           </article>
 
-          <!-- Gráfico 3 -->
+          <!-- Chart 3 -->
           <article class="visual-card">
             <div class="visual-media">
               <img 
                 src={`${base}/images/projects/gaming/matriz-correlacion.png`} 
-                alt="Mapa de calor de correlaciones" 
+                alt="Correlation heatmap" 
                 loading="lazy"
               />
             </div>
             <div class="visual-caption">
-              <span class="step-tag">Fase 3: Contraste de Hipótesis</span>
-              <h3>Desacople entre horas de juego y salud mental</h3>
+              <span class="step-tag">Phase 3: Hypothesis Testing</span>
+              <h3>Decoupling between playtime and mental health</h3>
               <p>
-                Las correlaciones entre horas de juego y puntajes de ansiedad (-0.0088), depresión (0.0029) o estrés (0.0067) son prácticamente nulas, desmintiendo causalidad directa en los datos agregados.
+                Correlations between gaming hours and anxiety (-0.0088), depression (0.0029), or stress (0.0067) scores are near zero, ruling out direct linear correlation in aggregate data.
               </p>
             </div>
           </article>
 
-          <!-- Gráfico 4 -->
+          <!-- Chart 4 -->
           <article class="visual-card">
             <div class="visual-media">
               <img 
                 src={`${base}/images/projects/gaming/horas-vs-adiccion.png`} 
-                alt="Diagrama de dispersión de horas frente a nivel de adicción" 
+                alt="Scatter plot of playtime versus addiction level" 
                 loading="lazy"
               />
             </div>
             <div class="visual-caption">
-              <span class="step-tag">Fase 4: Hallazgo Crítico</span>
-              <h3>Vínculo directo con nivel de adicción autopercibido (r = 0.89)</h3>
+              <span class="step-tag">Phase 4: Critical Finding</span>
+              <h3>Strong link with self-reported addiction level (r = 0.89)</h3>
               <p>
-                Mientras que los síntomas afectivos no mostraron relación directa, el incremento de horas se traduce linealmente en una mayor percepción de pérdida de control y dependencia.
+                While affective symptoms showed no direct correlation, higher playtime aligns linearly with perceived loss of control and dependency.
               </p>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- Conclusiones -->
+      <!-- Conclusions -->
       <section class="section-block callout-block">
-        <h2>Conclusiones Clave</h2>
+        <h2>Key Takeaways</h2>
         <ul>
-          <li><strong>Datos vs. Asunciones:</strong> Jugar más horas no implica automáticamente mayores niveles de ansiedad o depresión en la muestra analizada.</li>
-          <li><strong>Métrica de riesgo real:</strong> La alerta debe enfocarse en los niveles de adicción y desplazamiento de sueño/ejercicio más que en el simple acto de jugar.</li>
+          <li><strong>Data vs. Assumptions:</strong> Playing more hours does not automatically mean higher anxiety or depression scores in the analyzed sample.</li>
+          <li><strong>Actionable Risk Signal:</strong> Monitoring should focus on addiction levels and sleep or exercise displacement rather than playtime alone.</li>
         </ul>
         <div class="actions">
           <a href="https://github.com/RenatoSaldivia/gaming-mental-health-data-analysis" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
-            Revisar código en GitHub
+            Inspect code on GitHub
           </a>
         </div>
       </section>

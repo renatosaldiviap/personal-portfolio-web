@@ -11,25 +11,25 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
   <main class="case-study">
     <div class="case-study__container">
-      <!-- Botón Volver -->
-      <a href={`${base}/#proyectos`} class="back-link">&larr; Volver al portafolio</a>
+      <!-- Back Button -->
+      <a href={`${base}/#projects`} class="back-link">&larr; Back to portfolio</a>
 
-      <!-- Encabezado / Resumen Ejecutivo -->
+      <!-- Header / Executive Summary -->
       <header class="case-study__header">
-        <p class="eyebrow">Caso de Estudio &bull; Análisis de Datos</p>
-        <h1>Análisis de Datos Meteorológicos de Australia</h1>
+        <p class="eyebrow">Case Study &bull; Data Analysis</p>
+        <h1>Australia Weather Data Analysis</h1>
         <p class="lead">
-          Limpieza, exploración estadística y modelado bajo la metodología CRISP-DM 
-          para identificar factores críticos en la predicción de precipitaciones.
+          Data cleaning, statistical exploration, and modeling under the CRISP-DM
+          methodology to identify key drivers for next-day rainfall prediction.
         </p>
 
         <div class="quick-facts">
           <div class="fact-card">
-            <span class="fact-label">Rol</span>
+            <span class="fact-label">Role</span>
             <span class="fact-value">Data Analyst / ML Explorer</span>
           </div>
           <div class="fact-card">
-            <span class="fact-label">Metodología</span>
+            <span class="fact-label">Methodology</span>
             <span class="fact-value">CRISP-DM</span>
           </div>
           <div class="fact-card">
@@ -37,121 +37,121 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
             <span class="fact-value">Python, Pandas, Seaborn, Scikit-learn</span>
           </div>
           <div class="fact-card">
-            <span class="fact-label">Entregable</span>
+            <span class="fact-label">Deliverable</span>
             <a href="https://github.com/RenatoSaldivia/australia-weather-data-analysis" target="_blank" rel="noopener noreferrer" class="fact-link">
-              Repositorio GitHub &rarr;
+              GitHub Repository &rarr;
             </a>
           </div>
         </div>
       </header>
 
-      <!-- El Reto / Contexto de Negocio -->
+      <!-- Challenge / Business Context -->
       <section class="section-block">
-        <h2>1. El Reto y Contexto</h2>
+        <h2>1. Challenge &amp; Context</h2>
         <p>
-          El clima australiano presenta una alta variabilidad geográfica y estacional. 
-          El objetivo fue tomar un conjunto de registros históricos con valores atípicos y datos faltantes 
-          para estructurar una canalización de limpieza consistente y entender qué variables atmosféricas 
-          tienen mayor peso predictivo sobre la lluvia del día siguiente (<em>RainTomorrow</em>).
+          Australia's climate shows high geographic and seasonal variability.
+          The objective was to take a historical dataset with outliers and missing values,
+          build a consistent cleaning pipeline, and determine which atmospheric variables
+          carry the strongest predictive weight for next-day rain (<em>RainTomorrow</em>).
         </p>
       </section>
 
-      <!-- Galería Visual / Evidencia de CRISP-DM -->
+      <!-- Visual Gallery / CRISP-DM Evidence -->
       <section class="section-block">
-        <h2>2. Evidencia Visual y Hallazgos Clave</h2>
+        <h2>2. Visual Evidence &amp; Key Findings</h2>
         <p class="section-desc">
-          Tres hitos visuales del proceso: desde la detección del desbalance original hasta la validación final del modelo predictivo.
+          Three visual milestones across the workflow: from diagnosing initial class imbalance to validating the final classification model.
         </p>
 
         <div class="visual-grid">
-          <!-- Gráfico 1: Balance -->
+          <!-- Chart 1: Class Balance -->
           <article class="visual-card">
             <div class="visual-media">
               <img 
                 src={`${base}/images/projects/weather/balance-clases.png`} 
-                alt="Distribución de días con y sin lluvia" 
+                alt="Distribution of rainy vs. non-rainy days" 
                 loading="lazy"
               />
             </div>
             <div class="visual-caption">
-              <span class="step-tag">Fase CRISP-DM: Data Understanding</span>
-              <h3>Diagnóstico de desbalance de clases (77.6% vs 22.4%)</h3>
+              <span class="step-tag">CRISP-DM Phase: Data Understanding</span>
+              <h3>Class imbalance diagnosis (77.6% vs. 22.4%)</h3>
               <p>
-                Los días sin lluvia superan ampliamente a los días lluviosos. Un modelo ingenuo alcanzaría 78% de precisión diciendo siempre "No", por lo que fue obligatorio ajustar la estrategia hacia métricas de Recall y ROC-AUC.
+                Dry days far outnumber rainy days. A naive model would hit ~78% accuracy by always predicting "No," making Recall and ROC-AUC essential evaluation metrics.
               </p>
             </div>
           </article>
 
-          <!-- Gráfico 2: Correlación -->
+          <!-- Chart 2: Correlation -->
           <article class="visual-card">
             <div class="visual-media">
               <img 
                 src={`${base}/images/projects/weather/matriz-correlacion.png`} 
-                alt="Matriz de correlación entre variables numéricas" 
+                alt="Correlation matrix across numerical variables" 
                 loading="lazy"
               />
             </div>
             <div class="visual-caption">
-              <span class="step-tag">Fase CRISP-DM: Data Preparation</span>
-              <h3>Análisis de multicolinealidad y filtrado de variables</h3>
+              <span class="step-tag">CRISP-DM Phase: Data Preparation</span>
+              <h3>Multicollinearity analysis &amp; feature filtering</h3>
               <p>
-                La matriz reveló correlaciones redundantes extremas (Pressure9am vs Pressure3pm = 0.96) y confirmó que la humedad relativa de la tarde (Humidity3pm) y la radiación solar son los predictores primarios para la lluvia.
+                The matrix exposed extreme collinearity (Pressure9am vs. Pressure3pm = 0.96) and confirmed that afternoon relative humidity (Humidity3pm) and solar radiation are primary rainfall signals.
               </p>
             </div>
           </article>
 
-          <!-- Gráfico 3: Matriz de Confusión -->
+          <!-- Chart 3: Confusion Matrix -->
           <article class="visual-card">
             <div class="visual-media">
               <img 
                 src={`${base}/images/projects/weather/matriz-confusion.png`} 
-                alt="Matriz de confusión normalizada y absoluta del modelo" 
+                alt="Normalized and raw confusion matrix of the model" 
                 loading="lazy"
               />
             </div>
             <div class="visual-caption">
-              <span class="step-tag">Fase CRISP-DM: Evaluation</span>
-              <h3>Desempeño final: 78.65% de detección efectiva de lluvia</h3>
+              <span class="step-tag">CRISP-DM Phase: Evaluation</span>
+              <h3>Final performance: 78.65% effective rainfall detection</h3>
               <p>
-                El modelo final identificó correctamente el 78.65% de los episodios de lluvia reales (5,014 aciertos) y el 81.11% de los días secos, logrando una clasificación balanceada y confiable para toma de decisiones.
+                The final model correctly identified 78.65% of actual rain events (5,014 true positives) and 81.11% of dry days, delivering balanced, decision-ready classification.
               </p>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- Metodología y Decisiones Técnicas -->
+      <!-- Methodology & Technical Decisions -->
       <section class="section-block">
-        <h2>3. Proceso Aplicado (CRISP-DM)</h2>
+        <h2>3. Applied Workflow (CRISP-DM)</h2>
         <div class="steps-grid">
           <div class="step-card">
             <span class="step-num">01</span>
-            <h4>Comprensión de Datos</h4>
-            <p>Auditoría de consistencia de tipos, dispersión de valores atípicos y matriz de nulos.</p>
+            <h4>Data Understanding</h4>
+            <p>Audited data types, outlier spread, and missing-value patterns.</p>
           </div>
           <div class="step-card">
             <span class="step-num">02</span>
-            <h4>Preparación de Datos</h4>
-            <p>Imputación adaptativa de medianas regionales y codificación de categorías de viento.</p>
+            <h4>Data Preparation</h4>
+            <p>Applied regional median imputation and encoded wind-direction categories.</p>
           </div>
           <div class="step-card">
             <span class="step-num">03</span>
-            <h4>Modelado y Evaluación</h4>
-            <p>Entrenamiento de modelos base de clasificación priorizando métricas de Recall y ROC-AUC.</p>
+            <h4>Modeling &amp; Evaluation</h4>
+            <p>Trained baseline classifiers prioritizing Recall and ROC-AUC metrics.</p>
           </div>
         </div>
       </section>
 
-      <!-- Conclusiones / Valor generado -->
+      <!-- Conclusions / Generated Value -->
       <section class="section-block callout-block">
-        <h2>Conclusiones y Aprendizajes</h2>
+        <h2>Key Takeaways</h2>
         <ul>
-          <li><strong>Preparación de datos sobre modelado:</strong> El tratamiento cuidadoso de los nulos por región redujo drásticamente el sesgo predictivo frente a una imputación global estándar.</li>
-          <li><strong>Variables críticas:</strong> La presión atmosférica de la tarde combinada con el diferencial de temperatura entrega el 70% de la capacidad de discriminación en modelos lineales.</li>
+          <li><strong>Data prep over modeling:</strong> Region-aware handling of missing values substantially reduced predictive bias compared to naive global imputation.</li>
+          <li><strong>High-leverage signals:</strong> Afternoon atmospheric pressure paired with temperature spread accounts for 70% of discriminative power in linear models.</li>
         </ul>
         <div class="actions">
           <a href="https://github.com/RenatoSaldivia/australia-weather-data-analysis" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
-            Revisar código en GitHub
+            Inspect code on GitHub
           </a>
         </div>
       </section>
@@ -288,13 +288,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem; /* Pequeño margen para que el gráfico respire */
+  padding: 1rem;
 }
 
 .visual-media img {
   width: 100%;
-  max-height: 520px; /* Límite para no ocupar toda la pantalla */
-  object-fit: contain; /* Muestra el 100% del gráfico sin recortar ejes */
+  max-height: 520px;
+  object-fit: contain;
   display: block;
 }
   .visual-caption {

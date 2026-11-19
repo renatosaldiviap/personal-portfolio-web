@@ -15,14 +15,14 @@ const { title, description, image, technologies, github, url, demo } = Astro.pro
 <article class="project-card">
   {
     url ? (
-      <a href={url} class="project-card__image-link" aria-label={`Ver caso de estudio de ${title}`}>
+      <a href={url} class="project-card__image-link" aria-label={`View case study for ${title}`}>
         <div class="project-card__image">
-          <img src={image} alt={`Captura del proyecto ${title}`} loading="lazy" />
+          <img src={image} alt={`Screenshot of ${title}`} loading="lazy" />
         </div>
       </a>
     ) : (
       <div class="project-card__image">
-        <img src={image} alt={`Captura del proyecto ${title}`} loading="lazy" />
+        <img src={image} alt={`Screenshot of ${title}`} loading="lazy" />
       </div>
     )
   }
@@ -48,7 +48,7 @@ const { title, description, image, technologies, github, url, demo } = Astro.pro
       {
         url && (
           <a href={url} class="btn-case">
-            Ver caso de estudio &rarr;
+            View case study &rarr;
           </a>
         )
       }

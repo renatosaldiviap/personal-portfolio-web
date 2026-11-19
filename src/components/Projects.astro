@@ -4,21 +4,21 @@ import ProjectCard from "../components/ProjectCard.astro";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
-<section class="projects" id="proyectos">
+<section class="projects" id="projects">
   <div class="projects__content">
-    <p class="projects__eyebrow">Proyectos</p>
+    <p class="projects__eyebrow">Projects</p>
 
-    <h2>Lo que estoy construyendo</h2>
+    <h2>What I'm building</h2>
 
     <p class="projects__description">
-      Una selección de proyectos enfocados en resolver problemas con datos,
-      diseñados para ser comprensibles a nivel técnico y de negocio.
+      A selection of data-driven projects designed to be clear and actionable
+      from both a technical and business perspective.
     </p>
 
     <div class="projects__grid">
       <ProjectCard
         title="Weather Data Analysis"
-        description="Análisis y preparación de datos meteorológicos australianos utilizando la metodología CRISP-DM, con énfasis en limpieza, transformación y patrones climáticos."
+        description="Cleaning, transformation, and exploratory analysis of Australian weather data using CRISP-DM to uncover climate patterns and predictive signals."
         image={`${base}/images/projects/weather/matriz-correlacion.png`}
         technologies={[
           "Python",
@@ -32,34 +32,34 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         github="https://github.com/RenatoSaldivia/australia-weather-data-analysis"
       />
       <ProjectCard
-          title="Gaming & Mental Health Data Analysis"
-          description="Análisis exploratorio de datos sobre hábitos de juego y su relación real con indicadores de ansiedad, depresión y niveles de adicción."
-          image={`${base}/images/projects/gaming/matriz-correlacion.png`}
-          technologies={[
-            "Python",
-            "Pandas",
-            "NumPy",
-            "Matplotlib",
-            "Seaborn",
-            "Scikit-learn",
-          ]}
-          url={`${base}/proyectos/gaming-analysis`}
-          github="https://github.com/RenatoSaldivia/gaming-mental-health-data-analysis"
+        title="Gaming & Mental Health Data Analysis"
+        description="Exploratory analysis of gaming habits and their empirical correlation with anxiety, depression, and addiction indicators."
+        image={`${base}/images/projects/gaming/matriz-correlacion.png`}
+        technologies={[
+          "Python",
+          "Pandas",
+          "NumPy",
+          "Matplotlib",
+          "Seaborn",
+          "Scikit-learn",
+        ]}
+        url={`${base}/proyectos/gaming-analysis`}
+        github="https://github.com/RenatoSaldivia/gaming-mental-health-data-analysis"
       />
       <ProjectCard
-          title="Dashboard de Salud Digital y Bienestar Laboral"
-          description="Auditoría interactiva en Power BI sobre hábitos de conectividad, estrés y riesgo de agotamiento sobre 3.500 casos evaluados."
-          image={`${base}/images/projects/bi-dashboard/dashboard-preview.png`}
-          technologies={[
-            "Power BI",
-            "DAX",
-            "Data Modeling",
-            "Business Intelligence",
-            "People Analytics"
-          ]}
-          url={`${base}/proyectos/bi-dashboard`}
-          github="https://github.com/RenatoSaldivia/BI_Dashboard_Salud_Bienestar"
-      />    
+        title="Digital Health & Workplace Wellbeing Dashboard"
+        description="Interactive Power BI audit covering screen exposure, stress, and burnout risk across 3,500 evaluated records."
+        image={`${base}/images/projects/bi-dashboard/dashboard-preview.png`}
+        technologies={[
+          "Power BI",
+          "DAX",
+          "Data Modeling",
+          "Business Intelligence",
+          "People Analytics",
+        ]}
+        url={`${base}/proyectos/bi-dashboard`}
+        github="https://github.com/RenatoSaldivia/BI_Dashboard_Salud_Bienestar"
+      />
     </div>
   </div>
 </section>

@@ -11,113 +11,113 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
   <main class="case-study">
     <div class="case-study__container">
-      <!-- Botón Volver -->
-      <a href={`${base}/#proyectos`} class="back-link">&larr; Volver al portafolio</a>
+      <!-- Back Button -->
+      <a href={`${base}/#projects`} class="back-link">&larr; Back to portfolio</a>
 
-      <!-- Encabezado / Resumen Ejecutivo -->
+      <!-- Header / Executive Summary -->
       <header class="case-study__header">
-        <p class="eyebrow">Caso de Estudio &bull; Business Intelligence & People Analytics</p>
-        <h1>Salud Digital y Bienestar Laboral</h1>
+        <p class="eyebrow">Case Study &bull; Business Intelligence &amp; People Analytics</p>
+        <h1>Digital Health &amp; Workplace Wellbeing</h1>
         <p class="lead">
-          Auditoría y dashboard interactivo en Power BI para evaluar la sobreexposición digital, 
-          identificar perfiles en riesgo de burnout y medir factores protectores sobre 3.500 casos.
+          Interactive Power BI audit and dashboard evaluating digital overexposure,
+          identifying burnout risk profiles, and measuring protective factors across 3,500 cases.
         </p>
 
         <div class="quick-facts">
           <div class="fact-card">
-            <span class="fact-label">Rol</span>
-            <span class="fact-value">BI & Data Analyst</span>
+            <span class="fact-label">Role</span>
+            <span class="fact-value">BI &amp; Data Analyst</span>
           </div>
           <div class="fact-card">
-            <span class="fact-label">Enfoque</span>
-            <span class="fact-value">Modelado DAX & Auditoría</span>
+            <span class="fact-label">Focus</span>
+            <span class="fact-value">DAX Modeling &amp; Audit</span>
           </div>
           <div class="fact-card">
             <span class="fact-label">Stack</span>
             <span class="fact-value">Power BI, DAX, Python</span>
           </div>
           <div class="fact-card">
-            <span class="fact-label">Entregable</span>
+            <span class="fact-label">Deliverable</span>
             <a href="https://github.com/RenatoSaldivia/BI_Dashboard_Salud_Bienestar" target="_blank" rel="noopener noreferrer" class="fact-link">
-              Repositorio GitHub &rarr;
+              GitHub Repository &rarr;
             </a>
           </div>
         </div>
       </header>
 
-      <!-- Contexto -->
+      <!-- Context -->
       <section class="section-block">
-        <h2>1. El Contexto y Pregunta de Negocio</h2>
+        <h2>1. Context &amp; Business Question</h2>
         <p>
-          El uso intensivo de dispositivos móviles y plataformas laborales ha elevado el riesgo de fatiga cognitiva y desgaste laboral. El reto consistió en consolidar 3.500 evaluaciones para contestar tres interrogantes clave:
+          Heavy reliance on mobile devices and workplace platforms has increased the risk of cognitive fatigue and burnout. The challenge was to consolidate 3,500 evaluations to answer three core questions:
         </p>
         <p>
-          ¿A partir de cuántas horas de exposición diaria se dispara el riesgo crítico? ¿Qué impacto real tiene el ejercicio físico como contrapeso biológico? ¿Cuáles roles laborales presentan mayor estrés basal?
+          At how many daily screen hours does critical risk spike? What real impact does physical exercise have as a biological buffer? Which job roles show higher baseline stress?
         </p>
       </section>
 
       <!-- KPI Metrics Strip -->
       <section class="section-block">
-        <h2>2. Indicadores Clave del Estudio</h2>
+        <h2>2. Key Study Metrics</h2>
         <div class="kpi-grid">
           <div class="kpi-box">
-            <span class="kpi-number">3.500</span>
-            <span class="kpi-label">Casos Evaluados</span>
+            <span class="kpi-number">3,500</span>
+            <span class="kpi-label">Evaluated Cases</span>
           </div>
           <div class="kpi-box kpi-box--danger">
-            <span class="kpi-number">20,1%</span>
-            <span class="kpi-label">Tasa Crítica de Alto Riesgo</span>
+            <span class="kpi-number">20.1%</span>
+            <span class="kpi-label">Critical High-Risk Rate</span>
           </div>
           <div class="kpi-box">
-            <span class="kpi-number">7,3 hrs</span>
-            <span class="kpi-label">Promedio Pantalla Diario</span>
+            <span class="kpi-number">7.3 hrs</span>
+            <span class="kpi-label">Avg. Daily Screen Time</span>
           </div>
           <div class="kpi-box kpi-box--warning">
             <span class="kpi-number">-56 min</span>
-            <span class="kpi-label">Déficit de Sueño (vs grupo base)</span>
+            <span class="kpi-label">Sleep Deficit (vs. baseline)</span>
           </div>
         </div>
       </section>
 
-      <!-- Galería de Evidencia Visual -->
+      <!-- Visual Evidence Gallery -->
       <section class="section-block">
-        <h2>3. Visualización y Panel de Control</h2>
+        <h2>3. Visualization &amp; Control Panel</h2>
         <p class="section-desc">
-          Panel interactivo desarrollado en Power BI con tema dark mode y contraste funcional:
+          Interactive Power BI report built with a dark mode theme and functional contrast:
         </p>
 
         <div class="visual-grid">
-          <!-- Vista Principal Dashboard -->
+          <!-- Main Dashboard View -->
           <article class="visual-card">
             <div class="visual-media">
               <img 
                 src={`${base}/images/projects/bi-dashboard/dashboard-preview.png`} 
-                alt="Monitor de Salud Digital y Bienestar Laboral en Power BI" 
+                alt="Digital Health and Workplace Wellbeing Power BI Monitor" 
                 loading="lazy"
               />
             </div>
             <div class="visual-caption">
-              <span class="step-tag">Entregable Central</span>
-              <h3>Monitor Ejecutivo de Riesgo y Productividad</h3>
+              <span class="step-tag">Core Deliverable</span>
+              <h3>Executive Risk &amp; Productivity Monitor</h3>
               <p>
-                Estructura de cuatro cuadrantes con filtrado dinámico regional y por dispositivo, permitiendo segmentar patrones de concentración de riesgo y respuestas fisiológicas al descanso.
+                Four-quadrant layout with dynamic regional and device filtering, enabling segmentation of risk concentration patterns and physiological recovery responses.
               </p>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- Conclusiones -->
+      <!-- Conclusions -->
       <section class="section-block callout-block">
-        <h2>Hallazgos Clave & DAX Modeling</h2>
+        <h2>Key Findings &amp; DAX Modeling</h2>
         <ul>
-          <li><strong>Umbral Crítico de Exposición:</strong> El porcentaje de casos en alto riesgo sube bruscamente al rebasar las 10 horas diarias de pantalla, pasando del 12%-14% basal a concentraciones superiores al 60%.</li>
-          <li><strong>Efecto Protector Físico:</strong> Realizar 5 o más días de actividad física semanal mitiga los picos de estrés y sostiene la calidad del descanso por encima de 2.8/4.0.</li>
-          <li><strong>Lógica Centralizada:</strong> Cálculos parametrizados en medidas DAX independientes (<code>Total Evaluados</code>, <code>Casos Alto Riesgo</code>, <code>% Alto Riesgo</code>, <code>Prom Horas Pantalla</code>) para garantizar escalabilidad.</li>
+          <li><strong>Critical Exposure Threshold:</strong> The share of high-risk cases rises sharply above 10 daily screen hours, jumping from a 12%–14% baseline to concentrations above 60%.</li>
+          <li><strong>Physical Protective Effect:</strong> Getting 5 or more days of weekly physical activity mitigates stress spikes and keeps sleep quality above 2.8/4.0.</li>
+          <li><strong>Centralized Logic:</strong> Parameterized calculations in standalone DAX measures (<code>Total Evaluados</code>, <code>Casos Alto Riesgo</code>, <code>% Alto Riesgo</code>, <code>Prom Horas Pantalla</code>) to ensure scalability.</li>
         </ul>
         <div class="actions">
           <a href="https://github.com/RenatoSaldivia/BI_Dashboard_Salud_Bienestar" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
-            Ver Proyecto en GitHub
+            View Project on GitHub
           </a>
         </div>
       </section>
